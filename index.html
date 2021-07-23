@@ -146,6 +146,49 @@
       100% { transform: rotate(-3deg); }
     }
 
+    .header-section {
+        margin-bottom: 35px;
+      }
+
+      .header-section .title {
+        position: relative;
+        margin-bottom: 40px;
+        padding-bottom: 25px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .header-section .title:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 140px;
+        height: 1px;
+        background-color: #f70037;
+      }
+
+      .header-section .title:after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 45px;
+        height: 3px;
+        background-color: #726467;
+      }
+
+      .header-section .title span {
+        color: #f70037;
+      }
+
+      .header-section .description {
+        color: #6f6f71;
+      }
+
+
     .single-service {
       margin-top: 40px;
       background-color: #24252a;
@@ -172,13 +215,12 @@
 
       </style>
 
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
-        <div class="container-fluid">
-          <!-- Navbar brand -->
-          <a class="navbar-brand nav-link" target="_blank" href="#">
-            <strong>LOGO</strong>
-          </a>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+  <div class="container-fluid">
+    <!-- Navbar brand -->
+    
+          <img src="./img/logo.jpg" style="height: 60px; margin-top: -15px;"  alt="">
           <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
             aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
@@ -189,14 +231,13 @@
                 <a class="nav-link" aria-current="page" href="#intro">Home</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="https://mdbootstrap.com/docs/standard/" target="_blank">Classes</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
                   target="_blank">Blog</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://mdbootstrap.com/docs/standard/" target="_blank">Classes</a>
-              </li>
             </ul>
-
             <ul class="navbar-nav d-flex flex-row">
               <!-- Icons -->
               <li class="nav-item me-3 me-lg-0">
@@ -327,14 +368,17 @@
 
         <!--Section: Content-->
         <section class="text-center">
-          <h2 class="mb-5"><strong class="" style="color: #DAA520;">Our Services</strong></h2>
+          <div class="header-section">
+						<h2 class="title" style="color: white;">Exclusive <span>Services</span></h2>
+						<p class="description">Check out some of the services we offer </p>
+					</div>
           <div class="row">
             <!-- Start Single Service -->
             <div class="col-md-6 col-lg-4">
               <div class="single-service">
                 <div class="part-1">
-                  <i class="fab fa-500px" style="color:white"></i>
-                  <h3 class="title" style="color: #DAA520;">Event Coverage</h3>
+                  <i class="fab fa-500px" ></i>
+                  <h3 class="title" style="color: white;">Event Coverage</h3>
                 </div>
                 <div class="part-2">
                   <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
@@ -347,8 +391,8 @@
           <div class="col-md-6 col-lg-4">
             <div class="single-service">
               <div class="part-1">
-                <i class="fab fa-500px" style="color: white;"></i>
-                <h3 class="title" style="color:#DAA520">Indoor Shoots</h3>
+                <i class="fab fa-500px"></i>
+                <h3 class="title" style="color:white">Indoor Shoots</h3>
               </div>
               <div class="part-2">
                 <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
@@ -361,8 +405,8 @@
           <div class="col-md-6 col-lg-4">
             <div class="single-service">
               <div class="part-1">
-                <i class="fab fa-500px" style="color: white;"></i>
-                <h3 class="title" style="color:#DAA520">Outdoor Shoots</h3>
+                <i class="fab fa-500px"></i>
+                <h3 class="title" style="color:white">Outdoor Shoots</h3>
               </div>
               <div class="part-2">
                 <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
