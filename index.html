@@ -89,6 +89,63 @@
         .navbar .nav-link {
           color: #fff !important;
         }
+
+    .wave {
+      float: left;
+      margin: 10px;
+      margin-top: 40px;
+      animation: wave  ease-in-out 0.5s infinite alternate;
+      transform-origin: center -20px;
+    }
+
+    .wave:hover {
+      animation-play-state: paused;
+    }
+
+    .wave img {
+      border: 5px solid #f8f8f8;
+      display: block;
+      width: 300px;
+      height: 300px;
+    }
+
+    .wave figcaption {
+      text-align: center;
+    }
+
+    .wave:after{
+      content: '';
+      position: absolute;
+      width: 20px; 
+      height: 20px;
+      border: 1.5px solid #ffffff;
+      top: -10px; 
+      left: 50%;
+      z-index: 0;
+      border-bottom: none;
+      border-right: none;
+      transform: rotate(45deg);
+    }
+          
+    .wave:before{
+      content: '';
+      position: absolute;
+      top: -23px;
+      left: 50%;
+      display: block;
+      height: 44px;
+      width: 47px;
+      background-image: url(https://cdn.hashnode.com/res/hashnode/image/upload/v1602040503586/FW6g79WBY.png);
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+      z-index: 16;
+    }
+            
+    @keyframes wave {
+      0% { transform: rotate(3deg); }
+      100% { transform: rotate(-3deg); }
+    }
+
       </style>
 
       <!-- Navbar -->
@@ -221,7 +278,7 @@
         <section>
           <div class="row">
             <div class="col-md-6 gx-5 mb-4 " data-mdb-ripple-color="light">
-              <img style="width: 350px; height: auto; margin-left: 200px; border-radius: 15px;" src="https://i.pinimg.com/236x/9d/3b/07/9d3b0785372cd1c73db1b25ebd39f6a5.jpg" class="img-fluid bg-image hover-overlay ripple shadow-2-strong" />
+              <img style="width: auto; height: auto;  border-radius: 15px;" src="./img/welcome.jpg" class="img-fluid bg-image hover-overlay ripple shadow-2-strong" />
             </div>
 
             <div class="col-md-6 gx-5 mb-4 text-white">
@@ -320,7 +377,53 @@
 
         <hr class="my-5" />
 
-        <!--Section: Content-->
+        <!-- Start of Gallery -->
+        <div class="view row text-center">
+          <h2  style="color: #DAA520;">Gallery</h2>
+          <h4  style="color: white;">Check out some of our work</h4>
+
+          <div style="margin-top: 20px;">
+            <!-- first row -->
+            <figure class="wave">
+              <img src="./img/gallery.jpg" alt="rajni"></img>
+            </figure>
+          
+            <figure class="wave">
+              <img src="./img/gallery1.jpg" alt="chuck"></img>
+            </figure>
+          
+            <figure class="wave">
+              <img src="./img/gallery2.jpg" alt="chan"></img>
+            </figure>
+          
+            <figure class="wave">
+              <img src="./img/gallery3.jpg" alt="bean"></img>
+            </figure>
+            <!-- end row -->
+            <!-- second row -->
+            <figure class="wave">
+              <img src="./img/gallery4.jpg" alt="rajni"></img>
+            </figure>
+          
+            <figure class="wave">
+              <img src="./img/gallery5.jpg" alt="chuck"></img>
+            </figure>
+          
+            <figure class="wave">
+              <img src="./img/gallery6.jpg" alt="chan"></img>
+            </figure>
+          
+            <figure class="wave">
+              <img src="./img/gallery7.jpg" alt="bean"></img>
+            </figure>
+            <!-- end row -->
+          </div>
+        </div>
+        <!-- end of gallery -->
+
+        <hr class="my-5" />
+
+        <!-- contact form-->
         <section class="mb-5">
           <h1 class="mb-5 text-center"><strong style="color: #DAA520;">Contact Us</strong></h1>
 
