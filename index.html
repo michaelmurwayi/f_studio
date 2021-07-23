@@ -36,13 +36,13 @@
           background-position: center center;
         }
         .carousel-item:nth-child(2) {
-          background-image: url('https://i.pinimg.com/originals/e0/37/da/e037da692a3f9aea27659086b5081ac8.jpg');
+          background-image: url('./img/welcome.jpg');
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center center;
         }
         .carousel-item:nth-child(3) {
-          background-image: url('https://i.pinimg.com/236x/93/b0/56/93b056af9db519c5e2b5206279a79662.jpg');
+          background-image: url('./img/gallery4.jpg');
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center center;
@@ -145,6 +145,30 @@
       0% { transform: rotate(3deg); }
       100% { transform: rotate(-3deg); }
     }
+
+    .single-service {
+      margin-top: 40px;
+      background-color: #24252a;
+      box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    }
+    .single-service .part-1 {
+      padding: 40px 40px 25px;
+      border-bottom: 2px solid #1d1e23;
+      }
+
+    .single-service .part-1 i {
+      margin-bottom: 25px;
+      font-size: 50px;
+      color: #f70037;
+    }
+
+    .section-services .single-service .part-1 .title {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      line-height: 1.8em;
+    }
+
 
       </style>
 
@@ -278,7 +302,7 @@
         <section>
           <div class="row">
             <div class="col-md-6 gx-5 mb-4 " data-mdb-ripple-color="light">
-              <img style="width: auto; height: auto;  border-radius: 15px;" src="./img/welcome.jpg" class="img-fluid bg-image hover-overlay ripple shadow-2-strong" />
+              <img style="width: 500px; height: 450px;  border-radius: 15px;" src="./img/intro.jpg" class="img-fluid bg-image hover-overlay ripple shadow-2-strong" />
             </div>
 
             <div class="col-md-6 gx-5 mb-4 text-white">
@@ -304,74 +328,49 @@
         <!--Section: Content-->
         <section class="text-center">
           <h2 class="mb-5"><strong class="" style="color: #DAA520;">Our Services</strong></h2>
-
           <div class="row">
-            <div class="col-lg-4 col-md-12 mb-4">
-              <div class="card">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="dark">
-                  <img
-                    src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
-                    class="img-fluid"
-                  />
-                  <a href="#!">
-                    <div class="mask" style="background-color: rgba(255, 255, 255, 0.15);"></div>
-                  </a>
+            <!-- Start Single Service -->
+            <div class="col-md-6 col-lg-4">
+              <div class="single-service">
+                <div class="part-1">
+                  <i class="fab fa-500px" style="color:white"></i>
+                  <h3 class="title" style="color: #DAA520;">Event Coverage</h3>
                 </div>
-                <div class="card-body" style="background-color:rgba(0, 0, 0, 0.7);">
-                  <h5 class="card-title" style="color: #DAA520;">Card title</h5>
-                  <p class="card-text" style="color: blanchedalmond;">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
-                  </p>
-                  <a href="#!" class="btn btn-dark">Button</a>
+                <div class="part-2">
+                  <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
+                  <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
                 </div>
               </div>
             </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                  <img
-                    src="https://mdbootstrap.com/img/new/standard/nature/023.jpg"
-                    class="img-fluid"
-                  />
-                  <a href="#!">
-                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                  </a>
-                </div>
-                <div class="card-body" style="background-color:rgba(0, 0, 0, 0.7);">
-                  <h5 class="card-title" style="color: #DAA520;">Card title</h5>
-                  <p class="card-text" style="color: blanchedalmond;">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
-                  </p>
-                  <a href="#!" class="btn btn-dark">Button</a>
-                </div>
+				<!-- / End Single Service -->
+          <!-- Start Single Service -->
+          <div class="col-md-6 col-lg-4">
+            <div class="single-service">
+              <div class="part-1">
+                <i class="fab fa-500px" style="color: white;"></i>
+                <h3 class="title" style="color:#DAA520">Indoor Shoots</h3>
               </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                  <img
-                    src="https://mdbootstrap.com/img/new/standard/nature/111.jpg"
-                    class="img-fluid"
-                  />
-                  <a href="#!">
-                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                  </a>
-                </div>
-                <div class="card-body" style="background-color:rgba(0, 0, 0, 0.7);">
-                  <h5 class="card-title" style="color: #DAA520;">Card title</h5>
-                  <p class="card-text" style="color: blanchedalmond;">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
-                  </p>
-                  <a href="#!" class="btn btn-dark">Button</a>
-                </div>
+              <div class="part-2">
+                <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
+                <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
               </div>
             </div>
           </div>
+      <!-- / End Single Service -->    
+          <!-- Start Single Service -->
+          <div class="col-md-6 col-lg-4">
+            <div class="single-service">
+              <div class="part-1">
+                <i class="fab fa-500px" style="color: white;"></i>
+                <h3 class="title" style="color:#DAA520">Outdoor Shoots</h3>
+              </div>
+              <div class="part-2">
+                <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
+                <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
+              </div>
+            </div>
+          </div>
+      <!-- / End Single Service -->
         </section>
         <!--Section: Content-->
 
