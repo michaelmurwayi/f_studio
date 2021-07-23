@@ -89,6 +89,63 @@
         .navbar .nav-link {
           color: #fff !important;
         }
+
+    .wave {
+      float: left;
+      margin: 10px;
+      margin-top: 40px;
+      animation: wave  ease-in-out 0.5s infinite alternate;
+      transform-origin: center -20px;
+    }
+
+    .wave:hover {
+      animation-play-state: paused;
+    }
+
+    .wave img {
+      border: 5px solid #f8f8f8;
+      display: block;
+      width: 300px;
+      height: 300px;
+    }
+
+    .wave figcaption {
+      text-align: center;
+    }
+
+    .wave:after{
+      content: '';
+      position: absolute;
+      width: 20px; 
+      height: 20px;
+      border: 1.5px solid #ffffff;
+      top: -10px; 
+      left: 50%;
+      z-index: 0;
+      border-bottom: none;
+      border-right: none;
+      transform: rotate(45deg);
+    }
+          
+    .wave:before{
+      content: '';
+      position: absolute;
+      top: -23px;
+      left: 50%;
+      display: block;
+      height: 44px;
+      width: 47px;
+      background-image: url(https://cdn.hashnode.com/res/hashnode/image/upload/v1602040503586/FW6g79WBY.png);
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+      z-index: 16;
+    }
+            
+    @keyframes wave {
+      0% { transform: rotate(3deg); }
+      100% { transform: rotate(-3deg); }
+    }
+
       </style>
 
       <!-- Navbar -->
@@ -325,47 +382,29 @@
           <h2  style="color: #DAA520;">Gallery</h2>
           <h4  style="color: white;">Check out some of our work</h4>
 
-          <!-- first row -->
-          <div class="col-md-4 my-4">
-            <img src="https://mdbootstrap.com/img/Photos/Others/forest-sm.jpg" class="img-fluid" alt="placeholder">
-            <div class="mask flex-center waves-effect waves-light rgba-teal-strong">
-              <p class="white-text">strong overlay</p>
-            </div>
-          </div>
-          <div class="col-md-4 my-4">
-            <img src="https://mdbootstrap.com/img/Photos/Others/forest-sm.jpg" class="img-fluid" alt="placeholder">
-            <div class="mask flex-center waves-effect waves-light rgba-teal-strong">
-              <p class="white-text">strong overlay</p>
-            </div>
-          </div>
-          <div class="col-md-4 my-4">
-            <img src="https://mdbootstrap.com/img/Photos/Others/forest-sm.jpg" class="img-fluid" alt="placeholder">
-            <div class="mask flex-center waves-effect waves-light rgba-teal-strong">
-              <p class="white-text">strong overlay</p>
-            </div>
-          </div>
-          <!-- end of first row -->
-          <!-- second row -->
-          <div class="col-md-4 my-4">
-            <img src="https://mdbootstrap.com/img/Photos/Others/forest-sm.jpg" class="img-fluid" alt="placeholder">
-            <div class="mask flex-center waves-effect waves-light rgba-teal-strong">
-              <p class="white-text">strong overlay</p>
-            </div>
-          </div>
-          <div class="col-md-4 my-4">
-            <img src="https://mdbootstrap.com/img/Photos/Others/forest-sm.jpg" class="img-fluid" alt="placeholder">
-            <div class="mask flex-center waves-effect waves-light rgba-teal-strong">
-              <p class="white-text">strong overlay</p>
-            </div>
-          </div>
-          <div class="col-md-4 my-4">
-            <img src="https://mdbootstrap.com/img/Photos/Others/forest-sm.jpg" class="img-fluid" alt="placeholder">
-            <div class="mask flex-center waves-effect waves-light rgba-teal-strong">
-              <p class="white-text">strong overlay</p>
-            </div>
-          </div>
-          <!-- end of second row -->
+          <div style="margin-top: 20px;">
 
+            <figure class="wave">
+              <img src="./img/gallery.jpg" alt="rajni"></img>
+              <figcaption>Rajinikanth</figcaption>
+            </figure>
+          
+            <figure class="wave">
+              <img src="./img/gallery1.jpg" alt="chuck"></img>
+              <figcaption>Chuck Norris</figcaption>
+            </figure>
+          
+            <figure class="wave">
+              <img src="./img/gallery2.jpg" alt="chan"></img>
+              <figcaption>Jackie Chan</figcaption>
+            </figure>
+          
+            <figure class="wave">
+              <img src="./img/gallery3.jpg" alt="bean"></img>
+              <figcaption>Mr. Bean</figcaption>
+            </figure>
+          
+          </div>
         </div>
         <!-- end of gallery -->
 
