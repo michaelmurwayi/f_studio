@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +11,9 @@
     <!-- Google Fonts Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
     <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}" />
     <!-- Custom styles -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 </head>
 <body style="border-radius: 25%;">
         <!--Main Navigation-->
@@ -30,19 +31,19 @@
         }
 
         .carousel-item:nth-child(1) {
-          background-image: url('img/background1.jpg');
+          background-image: url("{% static 'img/background1.jpg' %}");
           background-repeat: no-repeat;
           background-size: 100%;
           background-position: center center;
         }
         .carousel-item:nth-child(2) {
-          background-image: url('img/background2.jpg');
+          background-image: url("{% static 'img/background2.jpg'%}");
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center center;
         }
         .carousel-item:nth-child(3) {
-          background-image: url('img/background3.jpg');
+          background-image: url("{% static 'img/background3.jpg' %}");
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center center;
@@ -278,7 +279,7 @@
         <section>
           <div class="row">
             <div class="col-md-6 gx-5 mb-4 " data-mdb-ripple-color="light">
-              <img style="width: auto; height: auto;  border-radius: 15px;" src="./img/falogo.jpg" class="img-fluid bg-image hover-overlay ripple shadow-2-strong" />
+              <img style="width: auto; height: auto;  border-radius: 15px;" src="{% static  './img/falogo.jpg' %}" class="img-fluid bg-image hover-overlay ripple shadow-2-strong" />
             </div>
 
             <div class="col-md-6 gx-5 mb-4 text-white">
@@ -325,14 +326,14 @@
               <div class="card">
                 <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="dark">
                   <img
-                    src="./img/image1.jpg"
+                    src="{% static './img/image1.jpg' %}"
                     class="img-fluid"
                   />
                   <a href="#!">
                     <div class="mask" style="background-color: rgba(255, 255, 255, 0.15);"></div>
                   </a>
                 </div>
-                <div class="card-body" style="background-color:rgba(0, 0, 0, 0.7);">
+                <div class="card-body" style="background-color:black">
                   <h5 class="card-title" style="color: #DAA520;">EVENT COVERAGE</h5>
                   <p class="card-text" style="color: blanchedalmond;">
                     We do event coverage, that is weeding shoots, cooperates meetings, parties and even funerals
@@ -349,14 +350,14 @@
               <div class="card">
                 <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                   <img
-                    src="./img/image3.jpg"
+                    src="{% static './img/image3.jpg' %}"
                     class="img-fluid"
                   />
                   <a href="#!">
                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                   </a>
                 </div>
-                <div class="card-body" style="background-color:rgba(0, 0, 0, 0.7);">
+                <div class="card-body" style="background-color:black">
                   <h5 class="card-title" style="color: #DAA520;">INDOORS SHOOT</h5>
                   <p class="card-text" style="color: blanchedalmond;">
                     Our studios is homely based studio therefore we focus more on indoor shoots to give the 
@@ -371,14 +372,14 @@
               <div class="card">
                 <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                   <img
-                    src="./img/image4.jpg"
+                    src="{% static './img/image4.jpg' %}"
                     class="img-fluid"
                   />
                   <a href="#!">
                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                   </a>
                 </div>
-                <div class="card-body" style="background-color:rgba(0, 0, 0, 0.7);">
+                <div class="card-body" style="background-color:black">
 			<h5 class="card-title" style="color: #DAA520;">OUTDOOR SHOOT</h5>
                   <p class="card-text" style="color: blanchedalmond;">
                     We also provide outdoor shoots to our client, though in any case client is supposed to cater
@@ -403,12 +404,12 @@
           <div style="margin-top: 20px;">
             <!-- first row -->
       
-              <img src="./img/gal1.jpg" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
-    <img src="./img/gal4.jpg" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
- <img src="./img/image5.jpg" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
- <img src="./img/gallery2.jpg" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
- <img src="./img/gallery3.jpg" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
- <img src="./img/image2.jpg" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
+              <img src="{% static './img/gal1.jpg' %}" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
+              <img src="{% static './img/gal4.jpg' %}" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
+              <img src="{% static './img/image5.jpg' %}" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
+              <img src="{% static './img/gallery2.jpg' %}" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
+              <img src="{% static './img/gallery3.jpg' %}" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
+              <img src="{% static './img/image2.jpg' %}" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
 
           </div>
         </div>
