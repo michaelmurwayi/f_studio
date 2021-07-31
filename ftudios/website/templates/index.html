@@ -1,25 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Material Design for Bootstrap</title>
+    <title>ftudiosafrica</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
     <!-- Google Fonts Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
     <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}" />
     <!-- Custom styles -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 </head>
 <body style="border-radius: 25%;">
         <!--Main Navigation-->
     <header>
       <style>
         body{
-          background-color: rgba(0, 0, 0, 0.8);;
+          background-color: black;
         }
         /* Carousel styling */
         #introCarousel,
@@ -30,19 +31,19 @@
         }
 
         .carousel-item:nth-child(1) {
-          background-image: url('https://i.pinimg.com/originals/7a/3d/7a/7a3d7aacab745322630bef258d909ad7.jpg');
+          background-image: url("{% static 'img/background1.jpg' %}");
           background-repeat: no-repeat;
           background-size: 100%;
           background-position: center center;
         }
         .carousel-item:nth-child(2) {
-          background-image: url('./img/welcome.jpg');
+          background-image: url("{% static 'img/background2.jpg'%}");
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center center;
         }
         .carousel-item:nth-child(3) {
-          background-image: url('./img/gallery4.jpg');
+          background-image: url("{% static 'img/background3.jpg' %}");
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center center;
@@ -228,14 +229,14 @@
           <div class="collapse navbar-collapse" id="navbarExample01">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item active">
-                <a class="nav-link" aria-current="page" href="#intro">Home</a>
+		       <a href="./index.html" class="btn btn-dark">HOME</a> 
+               
               </li>
+              <li class="nav-item"
+		      > <a href="{% url 'blog' %}" class="btn btn-dark">BLOG</a> 
+             </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://mdbootstrap.com/docs/standard/" target="_blank">Classes</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
-                  target="_blank">Blog</a>
+		      <a href="./classes.html" class="btn btn-dark">CLASSES</a> 
               </li>
             </ul>
             <ul class="navbar-nav d-flex flex-row">
@@ -283,7 +284,7 @@
             <div class="mask" style="backgLearn Bround-color: rgba(0, 0, 0, 0.6);">
               <div class="d-flex justify-content-center align-items-center h-100">
                 <div class="text-white text-center">
-                  <h1 class="mb-3" style="color:#DAA520; font-weight:900; font-size: 80px;">F_Studios</h1>
+                  <h1 class="mb-3" style="color:#DAA520; font-weight:900; font-size: 80px;">ftudiosafrica</h1>
                   <h4 class="mb-4" style="color:white; font-weight:900">Awesome Photography By Awesome People</h4>
                   
                 </div>
@@ -343,22 +344,37 @@
         <section>
           <div class="row">
             <div class="col-md-6 gx-5 mb-4 " data-mdb-ripple-color="light">
-              <img style="width: 500px; height: 450px;  border-radius: 15px;" src="./img/intro.jpg" class="img-fluid bg-image hover-overlay ripple shadow-2-strong" />
+              <img style="width: auto; height: auto;  border-radius: 15px;" src="{% static  './img/falogo.jpg' %}" class="img-fluid bg-image hover-overlay ripple shadow-2-strong" />
             </div>
 
             <div class="col-md-6 gx-5 mb-4 text-white">
-              <h4><strong style="color: #DAA520;">Welcome To F_Studios</strong></h4>
+              <h4><strong style="color: #DAA520;i padding-top: 20%;">Welcome To ftudiosafrica</strong></h4>
               <p class="text-muted">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis consequatur
-                eligendi quisquam doloremque vero ex debitis veritatis placeat unde animi laborum
-                sapiente illo possimus, commodi dignissimos obcaecati illum maiores corporis.
+               	<b>ftudiosafrica</b> is a production company that mainly deals with home photography
+		and video production.
+		we value our clients and we are here to give them the best service for both photography
+		and videography
               </p>
-              <p><strong style="color: #DAA520;">Doloremque vero ex debitis veritatis?</strong></p>
+	      <p><strong style="color: #DAA520;">LOCATION?</strong></p>
               <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod itaque voluptate
-                nesciunt laborum incidunt. Officia, quam consectetur. Earum eligendi aliquam illum
-                alias, unde optio accusantium soluta, iusto molestiae adipisci et?
+                we are located at ruaka, capital heights apartment alongside delta limuru road.
+              </p>  
+		
+	      <p><strong style="color: #DAA520;">WORK...?</strong></p>
+              <p class="text-muted">
+                we are mojorly interested in video production i.e music video,  movie production and any
+		content production, we have proffessional script writters, video directors and editors. 
+		our aim is to be the leading production  company in kenya in the next few years.
+		click on classes to get involved in our journey for production.
+	      </p>
+	      <a href="./classes.html" class="btn btn-dark">CLASSES</a>  
+	      <p><strong style="color: #DAA520;"><br>BOOKINGS AND RATES?</strong></p>
+              <p class="text-muted">
+                For events and photograpys booking, click on the button bellow to book for a session in our
+		studion of with our photgraphers and videographers follow the instructions to make sure
+		you have fully secure your slot.
               </p>
+ 	       <a href="#!" class="btn btn-dark">BOOKINGS</a>  
             </div>
           </div>
         </section>
@@ -373,44 +389,72 @@
 						<p class="description">Check out some of the services we offer </p>
 					</div>
           <div class="row">
-            <!-- Start Single Service -->
-            <div class="col-md-6 col-lg-4">
-              <div class="single-service">
-                <div class="part-1">
-                  <i class="fab fa-500px" ></i>
-                  <h3 class="title" style="color: white;">Event Coverage</h3>
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="dark">
+                  <img
+                    src="{% static './img/image1.jpg' %}"
+                    class="img-fluid"
+                  />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(255, 255, 255, 0.15);"></div>
+                  </a>
                 </div>
-                <div class="part-2">
-                  <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
-                  <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
+                <div class="card-body" style="background-color:black">
+                  <h5 class="card-title" style="color: #DAA520;">EVENT COVERAGE</h5>
+                  <p class="card-text" style="color: blanchedalmond;">
+                    We do event coverage, that is weeding shoots, cooperates meetings, parties and even funerals
+		    that is we take photos and record videos too.
+		    click the button for our rate card for event
+		    coverage
+                  </p>
+		  <a href="#!" class="btn btn-dark">RATE CARD</a>
                 </div>
               </div>
             </div>
-				<!-- / End Single Service -->
-          <!-- Start Single Service -->
-          <div class="col-md-6 col-lg-4">
-            <div class="single-service">
-              <div class="part-1">
-                <i class="fab fa-500px"></i>
-                <h3 class="title" style="color:white">Indoor Shoots</h3>
-              </div>
-              <div class="part-2">
-                <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
-                <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                  <img
+                    src="{% static './img/image3.jpg' %}"
+                    class="img-fluid"
+                  />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                  </a>
+                </div>
+                <div class="card-body" style="background-color:black">
+                  <h5 class="card-title" style="color: #DAA520;">INDOORS SHOOT</h5>
+                  <p class="card-text" style="color: blanchedalmond;">
+                    Our studios is homely based studio therefore we focus more on indoor shoots to give the 
+		    client the warm feeling of being home.click on the button to see more.
+                  </p>
+                  <a href="#!" class="btn btn-dark">IMAGES</a>
+                </div>
               </div>
             </div>
-          </div>
-      <!-- / End Single Service -->    
-          <!-- Start Single Service -->
-          <div class="col-md-6 col-lg-4">
-            <div class="single-service">
-              <div class="part-1">
-                <i class="fab fa-500px"></i>
-                <h3 class="title" style="color:white">Outdoor Shoots</h3>
-              </div>
-              <div class="part-2">
-                <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
-                <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                  <img
+                    src="{% static './img/image4.jpg' %}"
+                    class="img-fluid"
+                  />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                  </a>
+                </div>
+                <div class="card-body" style="background-color:black">
+			<h5 class="card-title" style="color: #DAA520;">OUTDOOR SHOOT</h5>
+                  <p class="card-text" style="color: blanchedalmond;">
+                    We also provide outdoor shoots to our client, though in any case client is supposed to cater
+		    for the location and tranport charges.
+		    click for more display
+                  </p>
+                  <a href="#!" class="btn btn-dark">IMAGES</a>
+                </div>
               </div>
             </div>
           </div>
@@ -427,39 +471,14 @@
 
           <div style="margin-top: 20px;">
             <!-- first row -->
-            <figure class="wave">
-              <img src="./img/gallery.jpg" alt="rajni"></img>
-            </figure>
-          
-            <figure class="wave">
-              <img src="./img/gallery1.jpg" alt="chuck"></img>
-            </figure>
-          
-            <figure class="wave">
-              <img src="./img/gallery2.jpg" alt="chan"></img>
-            </figure>
-          
-            <figure class="wave">
-              <img src="./img/gallery3.jpg" alt="bean"></img>
-            </figure>
-            <!-- end row -->
-            <!-- second row -->
-            <figure class="wave">
-              <img src="./img/gallery4.jpg" alt="rajni"></img>
-            </figure>
-          
-            <figure class="wave">
-              <img src="./img/gallery5.jpg" alt="chuck"></img>
-            </figure>
-          
-            <figure class="wave">
-              <img src="./img/gallery6.jpg" alt="chan"></img>
-            </figure>
-          
-            <figure class="wave">
-              <img src="./img/gallery7.jpg" alt="bean"></img>
-            </figure>
-            <!-- end row -->
+      
+              <img src="{% static './img/gal1.jpg' %}" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
+              <img src="{% static './img/gal4.jpg' %}" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
+              <img src="{% static './img/image5.jpg' %}" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
+              <img src="{% static './img/gallery2.jpg' %}" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
+              <img src="{% static './img/gallery3.jpg' %}" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
+              <img src="{% static './img/image2.jpg' %}" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
+
           </div>
         </div>
         <!-- end of gallery -->
@@ -468,7 +487,7 @@
 
         <!-- contact form-->
         <section class="mb-5">
-          <h1 class="mb-5 text-center"><strong style="color: #DAA520;">Contact Us</strong></h1>
+          <h1 class="mb-5 text-center"><strong style="color: #DAA520;">Your Message</strong></h1>
 
           <div class="row d-flex justify-content-center">
             <div class="col-md-6">
@@ -520,7 +539,7 @@
     <footer class="bg-dark text-lg-start">
       
       <div class="text-center py-4 align-items-center">
-        <p>Follow MDB on social media</p>
+        <p>Follow ftudioafrica on social media</p>
         <a
           href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA"
           class="btn btn-warning m-1"
@@ -562,14 +581,14 @@
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
         © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/">F_Studios.com</a>
+        <a class="text-white" href="https://mdbootstrap.com/">ftudiosafrica.com</a>
       </div>
       <!-- Copyright -->
     </footer>
     <!--Footer-->
     <!-- MDB -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
     <!-- Custom scripts -->
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
