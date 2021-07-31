@@ -430,16 +430,15 @@
             aria-hidden="true"
             
             >
-            <div class="modal-dialog">
+            <div class="modal-dialog" >
               <div class="modal-content">
-                <div class="modal-body" style="height: 80vh; margin-top: 0px;">
-                  <img src="{% static 'img/rates.png' %}" style="width: 100%; height: 80vh;">
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                <div class="modal-body" style="height: 80vh; margin-top: 0px; background-image: url('{% static './img/rates.png' %}'); background-position: center;">
+                  <!-- <img src="{% static 'img/rates.png' %}" style="width: 100%; height: 80vh;"> -->
+                  <button type="button" class="btn btn-warning" data-mdb-dismiss="modal" style="position: absolute; right: 0px; bottom: 0px;">
                     Close
                   </button>
                 </div>
+                
               </div>
             </div>
             </div>
