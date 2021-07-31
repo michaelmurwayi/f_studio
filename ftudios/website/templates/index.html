@@ -147,15 +147,81 @@
       100% { transform: rotate(-3deg); }
     }
 
+    .header-section {
+        margin-bottom: 35px;
+      }
+
+      .header-section .title {
+        position: relative;
+        margin-bottom: 40px;
+        padding-bottom: 25px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .header-section .title:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 140px;
+        height: 1px;
+        background-color: #f70037;
+      }
+
+      .header-section .title:after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 45px;
+        height: 3px;
+        background-color: #726467;
+      }
+
+      .header-section .title span {
+        color: #f70037;
+      }
+
+      .header-section .description {
+        color: #6f6f71;
+      }
+
+
+    .single-service {
+      margin-top: 40px;
+      background-color: #24252a;
+      box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    }
+    .single-service .part-1 {
+      padding: 40px 40px 25px;
+      border-bottom: 2px solid #1d1e23;
+      }
+
+    .single-service .part-1 i {
+      margin-bottom: 25px;
+      font-size: 50px;
+      color: #f70037;
+    }
+
+    .section-services .single-service .part-1 .title {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      line-height: 1.8em;
+    }
+
+
       </style>
 
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
-        <div class="container-fluid">
-          <!-- Navbar brand -->
-          <a class="navbar-brand nav-link" target="_blank" href="#">
-            <strong>LOGO</strong>
-          </a>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+  <div class="container-fluid">
+    <!-- Navbar brand -->
+    
+          <img src="./img/logo.jpg" style="height: 60px; margin-top: -15px;"  alt="">
           <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
             aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
@@ -173,7 +239,6 @@
 		      <a href="./classes.html" class="btn btn-dark">CLASSES</a> 
               </li>
             </ul>
-
             <ul class="navbar-nav d-flex flex-row">
               <!-- Icons -->
               <li class="nav-item me-3 me-lg-0">
@@ -319,8 +384,10 @@
 
         <!--Section: Content-->
         <section class="text-center">
-          <h2 class="mb-5"><strong class="" style="color: #DAA520;">Our Services</strong></h2>
-
+          <div class="header-section">
+						<h2 class="title" style="color: white;">Exclusive <span>Services</span></h2>
+						<p class="description">Check out some of the services we offer </p>
+					</div>
           <div class="row">
             <div class="col-lg-4 col-md-12 mb-4">
               <div class="card">
@@ -391,6 +458,7 @@
               </div>
             </div>
           </div>
+      <!-- / End Single Service -->
         </section>
         <!--Section: Content-->
 
