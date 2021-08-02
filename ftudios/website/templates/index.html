@@ -147,15 +147,81 @@
       100% { transform: rotate(-3deg); }
     }
 
+    .header-section {
+        margin-bottom: 35px;
+      }
+
+      .header-section .title {
+        position: relative;
+        margin-bottom: 40px;
+        padding-bottom: 25px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .header-section .title:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 140px;
+        height: 1px;
+        background-color: #f70037;
+      }
+
+      .header-section .title:after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 45px;
+        height: 3px;
+        background-color: #726467;
+      }
+
+      .header-section .title span {
+        color: #f70037;
+      }
+
+      .header-section .description {
+        color: #6f6f71;
+      }
+
+
+    .single-service {
+      margin-top: 40px;
+      background-color: #24252a;
+      box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    }
+    .single-service .part-1 {
+      padding: 40px 40px 25px;
+      border-bottom: 2px solid #1d1e23;
+      }
+
+    .single-service .part-1 i {
+      margin-bottom: 25px;
+      font-size: 50px;
+      color: #f70037;
+    }
+
+    .section-services .single-service .part-1 .title {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      line-height: 1.8em;
+    }
+
+
       </style>
 
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
-        <div class="container-fluid">
-          <!-- Navbar brand -->
-          <a class="navbar-brand nav-link" target="_blank" href="#">
-            <strong>LOGO</strong>
-          </a>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+  <div class="container-fluid">
+    <!-- Navbar brand -->
+    
+          <img src="{% static 'img/logo.jpg' %}" style="height: 60px; margin-top: -15px;"  alt="">
           <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
             aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
@@ -173,7 +239,6 @@
 		      <a href="./classes.html" class="btn btn-dark">CLASSES</a> 
               </li>
             </ul>
-
             <ul class="navbar-nav d-flex flex-row">
               <!-- Icons -->
               <li class="nav-item me-3 me-lg-0">
@@ -319,8 +384,10 @@
 
         <!--Section: Content-->
         <section class="text-center">
-          <h2 class="mb-5"><strong class="" style="color: #DAA520;">Our Services</strong></h2>
-
+          <div class="header-section">
+						<h2 class="title" style="color: white;">Exclusive <span>Services</span></h2>
+						<p class="description">Check out some of the services we offer </p>
+					</div>
           <div class="row">
             <div class="col-lg-4 col-md-12 mb-4">
               <div class="card">
@@ -340,11 +407,42 @@
 		    that is we take photos and record videos too.
 		    click the button for our rate card for event
 		    coverage
-                  </p>
-		  <a href="#!" class="btn btn-dark">RATE CARD</a>
+      </p>
+      <!-- Button trigger modal -->
+                  <button
+                  type="button"
+                  class="btn btn-dark"
+                  data-mdb-toggle="modal"
+                  data-mdb-target="#exampleModal"
+                  >
+                  Rate Cards
+                  </button>
                 </div>
               </div>
             </div>
+    <!-- rate cards -->
+    <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+            
+            >
+            <div class="modal-dialog" >
+              <div class="modal-content">
+                <div class="modal-body" style="height: 80vh; margin-top: 0px; background-image: url('{% static './img/rates.png' %}'); background-position: center;">
+                  <!-- <img src="{% static 'img/rates.png' %}" style="width: 100%; height: 80vh;"> -->
+                  <button type="button" class="btn btn-warning" data-mdb-dismiss="modal" style="position: absolute; right: 0px; bottom: 0px;">
+                    Close
+                  </button>
+                </div>
+                
+              </div>
+            </div>
+            <!-- end of rate card pop up  -->
+          </div>
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card">
@@ -363,7 +461,51 @@
                     Our studios is homely based studio therefore we focus more on indoor shoots to give the 
 		    client the warm feeling of being home.click on the button to see more.
                   </p>
-                  <a href="#!" class="btn btn-dark">IMAGES</a>
+                <!-- Button trigger modal -->
+                <button
+                type="button"
+                class="btn btn-dark"
+                data-mdb-toggle="modal"
+                data-mdb-target="#Modal2"
+                >
+                Images
+                </button>
+                <!-- outdoor shoot gallery -->
+                <!-- Modal -->
+                      <div
+                      class="modal fade"
+                      id="Modal2"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                      
+                      >
+                      <div class="modal-dialog" >
+                        <div class="modal-content">
+                          <div class="modal-body" style="height: 90vh;  margin-top: 0px; background-position: center;">
+                            <div class="view row text-center">
+                              <h2  style="color: #DAA520;">Gallery</h2>
+                              <h4  style="color: white;">Check out some of our work</h4>
+                    
+                              <div style="margin-top: 20px; row">
+                                <!-- first row -->
+                          
+                                  <img src="{% static './img/gal1.jpg' %}" class="col-md-4" alt="rajni"></img>
+                                  <img src="{% static './img/gal4.jpg' %}" class="col-md-4" alt="rajni"></img>
+                                  <img src="{% static './img/image5.jpg' %}" class="col-md-4" alt="rajni"></img>
+                                  <img src="{% static './img/gallery2.jpg' %}" class="col-md-4" alt="rajni"></img>
+                                  <img src="{% static './img/gallery3.jpg' %}" class="col-md-4" alt="rajni"></img>
+                                  <img src="{% static './img/image2.jpg' %}" class="col-md-4" alt="rajni"></img>
+                    
+                              </div>
+                            </div>
+                            <button type="button" class="btn btn-warning" data-mdb-dismiss="modal" style="position: absolute; right: 0px; bottom: 0px;">
+                              Close
+                            </button>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
                 </div>
               </div>
             </div>
@@ -386,11 +528,54 @@
 		    for the location and tranport charges.
 		    click for more display
                   </p>
-                  <a href="#!" class="btn btn-dark">IMAGES</a>
-                </div>
+                  <!-- Button trigger modal -->
+                <button
+                type="button"
+                class="btn btn-dark"
+                data-mdb-toggle="modal"
+                data-mdb-target="#Modal2"
+                >
+                Images
+                </button>
+                <!-- Modal -->
+                <div
+                class="modal fade"
+                id="Modal3"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+                
+                >
+                <div class="modal-dialog" >
+                  <div class="modal-content">
+                    <div class="modal-body" style="height: 90vh;  margin-top: 0px; background-position: center;">
+                      <div class="view row text-center">
+                        <h2  style="color: #DAA520;">Gallery</h2>
+                        <h4  style="color: white;">Check out some of our work</h4>
+                        
+                        <div style="margin-top: 20px; row">
+                          <!-- first row -->
+                          
+                          <img src="{% static './img/gal1.jpg' %}" class="col-md-4" alt="rajni"></img>
+                          <img src="{% static './img/gal4.jpg' %}" class="col-md-4" alt="rajni"></img>
+                          <img src="{% static './img/image5.jpg' %}" class="col-md-4" alt="rajni"></img>
+                          <img src="{% static './img/gallery2.jpg' %}" class="col-md-4" alt="rajni"></img>
+                          <img src="{% static './img/gallery3.jpg' %}" class="col-md-4" alt="rajni"></img>
+                          <img src="{% static './img/image2.jpg' %}" class="col-md-4" alt="rajni"></img>
+              
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-warning" data-mdb-dismiss="modal" style="position: absolute; right: 0px; bottom: 0px;">
+                        Close
+                      </button>
+                    </div>
+                    </div>
+                  </div>
               </div>
             </div>
           </div>
+          <!-- / End Single Service -->
+          <!-- outdoor shoot gallery -->
         </section>
         <!--Section: Content-->
 
@@ -468,9 +653,9 @@
     <!--Main layout-->
 
     <!--Footer-->
-    <footer class="bg-dark text-lg-start">
+    <footer class="bg-dark text-lg-start" style="background-image: url({% static 'img/background1.jpg'  %}); background-size:cover;">
       
-      <div class="text-center py-4 align-items-center">
+      <div class="text-center py-4 align-items-center text-white">
         <p>Follow ftudioafrica on social media</p>
         <a
           href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA"
