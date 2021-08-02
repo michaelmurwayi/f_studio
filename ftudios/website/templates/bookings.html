@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +10,9 @@
     <!-- Google Fonts Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
     <!-- MDB -->
-    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}" />
+    <link rel="stylesheet" href="css/mdb.min.css" />
     <!-- Custom styles -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body style="border-radius: 25%;">
         <!--Main Navigation-->
@@ -31,19 +30,19 @@
         }
 
         .carousel-item:nth-child(1) {
-          background-image: url("{% static 'img/background1.jpg' %}");
+          background-image: url('img/background1.jpg');
           background-repeat: no-repeat;
           background-size: 100%;
           background-position: center center;
         }
         .carousel-item:nth-child(2) {
-          background-image: url("{% static 'img/background2.jpg'%}");
+          background-image: url('img/background2.jpg');
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center center;
         }
         .carousel-item:nth-child(3) {
-          background-image: url("{% static 'img/background3.jpg' %}");
+          background-image: url('img/background3.jpg');
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center center;
@@ -163,14 +162,14 @@
           <div class="collapse navbar-collapse" id="navbarExample01">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item active">
-		       <a href="./index.html" class="btn btn-dark">HOME</a> 
-               
+                <a class="nav-link" aria-current="page" href="#intro">Home</a>
               </li>
-              <li class="nav-item"
-		      > <a href="{% url 'blog' %}" class="btn btn-dark">BLOG</a> 
-             </li>
               <li class="nav-item">
-		      <a href="./classes.html" class="btn btn-dark">CLASSES</a> 
+                <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
+                  target="_blank">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://mdbootstrap.com/docs/standard/" target="_blank">Classes</a>
               </li>
             </ul>
 
@@ -219,7 +218,7 @@
             <div class="mask" style="backgLearn Bround-color: rgba(0, 0, 0, 0.6);">
               <div class="d-flex justify-content-center align-items-center h-100">
                 <div class="text-white text-center">
-                  <h1 class="mb-3" style="color:#DAA520; font-weight:900; font-size: 80px;">ftudiosafrica</h1>
+                  <h1 class="mb-3" style="color:#DAA520; font-weight:900; font-size: 80px;">F_Studios</h1>
                   <h4 class="mb-4" style="color:white; font-weight:900">Awesome Photography By Awesome People</h4>
                   
                 </div>
@@ -270,208 +269,91 @@
       </div>
       <!-- Carousel wrapper -->
     </header>
-    <!--Main Navigation-->
+   <body>
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="booking-bg"></div>
+						<form>
+							<div class="form-header">
+								<h2>Book Your Taxi</h2>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="text" placeholder="Enter your Name">
+								<span class="form-label">Name</span>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="tel" placeholder="Enter your Phone number">
+								<span class="form-label">Phone</span>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="tel" placeholder="Enter an origin location">
+								<span class="form-label">Pickup Location</span>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="tel" placeholder="Enter a destination location">
+								<span class="form-label">Destination Location</span>
+							</div>
+							<div class="form-group">
+								<select class="form-control" required>
+									<option value="" label="&nbsp;" selected hidden></option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+								<span class="select-arrow"></span>
+								<span class="form-label">Passenger Numbers</span>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="date" required>
+										<span class="form-label">Pickup Date</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="time" required>
+										<span class="form-label">Pickup Time</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-btn">
+								<button class="submit-btn">Book Now</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <!--Main layout-->
-    <main class="mt-5">
-      <div class="container">
-        <!--Section: Content-->
-        <section>
-          <div class="row">
-            <div class="col-md-6 gx-5 mb-4 " data-mdb-ripple-color="light">
-              <img style="width: auto; height: auto;  border-radius: 15px;" src="{% static  './img/falogo.jpg' %}" class="img-fluid bg-image hover-overlay ripple shadow-2-strong" />
-            </div>
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$('.form-control').each(function () {
+			floatedLabel($(this));
+		});
 
-            <div class="col-md-6 gx-5 mb-4 text-white">
-              <h4><strong style="color: #DAA520;i padding-top: 20%;">Welcome To ftudiosafrica</strong></h4>
-              <p class="text-muted">
-               	<b>ftudiosafrica</b> is a production company that mainly deals with home photography
-		and video production
-		we value our clients and we are here to give them the best service for both photography
-		and videography
-              </p>
-	      <p><strong style="color: #DAA520;">LOCATION?</strong></p>
-              <p class="text-muted">
-                we are located at ruaka, capital heights apartment alongside delta limuru road.
-              </p>  
-		
-	      <p><strong style="color: #DAA520;">WORK...?</strong></p>
-              <p class="text-muted">
-                we are mojorly interested in video production i.e music video,  movie production and any
-		content production, we have proffessional script writters, video directors and editors. 
-		our aim is to be the leading production  company in kenya in the next few years.
-		click on classes to get involved in our journey for production.
-	      </p>
-	      <a href="./classes.html" class="btn btn-dark">CLASSES</a>  
-	      <p><strong style="color: #DAA520;"><br>BOOKINGS AND RATES?</strong></p>
-              <p class="text-muted">
-                For events and photograpys booking, click on the button bellow to book for a session in our
-		studion of with our photgraphers and videographers follow the instructions to make sure
-		you have fully secure your slot.
-              </p>
-	      	<a href="./bookings.html" class="btn btn-dark">BOOKINGS</a> 
-            </div>
-          </div>
-        </section>
-        <!--Section: Content-->
+		$('.form-control').on('input', function () {
+			floatedLabel($(this));
+		});
 
-        <hr class="my-5" />
-
-        <!--Section: Content-->
-        <section class="text-center">
-          <h2 class="mb-5"><strong class="" style="color: #DAA520;">Our Services</strong></h2>
-
-          <div class="row">
-            <div class="col-lg-4 col-md-12 mb-4">
-              <div class="card">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="dark">
-                  <img
-                    src="{% static './img/image1.jpg' %}"
-                    class="img-fluid"
-                  />
-                  <a href="#!">
-                    <div class="mask" style="background-color: rgba(255, 255, 255, 0.15);"></div>
-                  </a>
-                </div>
-                <div class="card-body" style="background-color:black">
-                  <h5 class="card-title" style="color: #DAA520;">EVENT COVERAGE</h5>
-                  <p class="card-text" style="color: blanchedalmond;">
-                    We do event coverage, that is weeding shoots, cooperates meetings, parties and even funerals
-		    that is we take photos and record videos too.
-		    click the button for our rate card for event
-		    coverage
-                  </p>
-		  <a href="#!" class="btn btn-dark">RATE CARD</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                  <img
-                    src="{% static './img/image3.jpg' %}"
-                    class="img-fluid"
-                  />
-                  <a href="#!">
-                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                  </a>
-                </div>
-                <div class="card-body" style="background-color:black">
-                  <h5 class="card-title" style="color: #DAA520;">INDOORS SHOOT</h5>
-                  <p class="card-text" style="color: blanchedalmond;">
-                    Our studios is homely based studio therefore we focus more on indoor shoots to give the 
-		    client the warm feeling of being home.click on the button to see more.
-                  </p>
-                  <a href="#!" class="btn btn-dark">IMAGES</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                  <img
-                    src="{% static './img/image4.jpg' %}"
-                    class="img-fluid"
-                  />
-                  <a href="#!">
-                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                  </a>
-                </div>
-                <div class="card-body" style="background-color:black">
-			<h5 class="card-title" style="color: #DAA520;">OUTDOOR SHOOT</h5>
-                  <p class="card-text" style="color: blanchedalmond;">
-                    We also provide outdoor shoots to our client, though in any case client is supposed to cater
-		    for the location and tranport charges.
-		    click for more display
-                  </p>
-                  <a href="#!" class="btn btn-dark">IMAGES</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!--Section: Content-->
-
-        <hr class="my-5" />
-
-        <!-- Start of Gallery -->
-        <div class="view row text-center">
-          <h2  style="color: #DAA520;">Gallery</h2>
-          <h4  style="color: white;">Check out some of our work</h4>
-
-          <div style="margin-top: 20px;">
-            <!-- first row -->
-      
-              <img src="{% static './img/gal1.jpg' %}" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
-              <img src="{% static './img/gal4.jpg' %}" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
-              <img src="{% static './img/image5.jpg' %}" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
-              <img src="{% static './img/gallery2.jpg' %}" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
-              <img src="{% static './img/gallery3.jpg' %}" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
-              <img src="{% static './img/image2.jpg' %}" style="height: autopx; width: 500px; object-fit: conatin" alt="rajni"></img>
-
-          </div>
-        </div>
-        <!-- end of gallery -->
-
-        <hr class="my-5" />
-
-        <!-- contact form-->
-        <section class="mb-5">
-          <h1 class="mb-5 text-center"><strong style="color: #DAA520;">Your Message</strong></h1>
-
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-6">
-              <form>
-                <!-- 2 column grid layout with text inputs for the first and last names -->
-                <div class="row mb-4">
-                  <div class="col">
-                    <div class="form-group">
-                      <input type="text" id="form3Example1" class="form-control" />
-                      <label class="form-label" style="color: #DAA520;" for="form3Example1">First name</label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-group">
-                      <input type="text" id="form3Example2" class="form-control" />
-                      <label class="form-label" style="color: #DAA520;" for="form3Example2">Last name</label>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Email input -->
-                <div class="form-group mb-4">
-                  <input type="email" id="form3Example3" class="form-control" />
-                  <label class="form-label" style="color: #DAA520;" for="form3Example3">Email address</label>
-                </div>
-
-                <!-- Password input -->
-                <div class="form-group mb-4">
-                  <input type="text" id="form3Example4" class="form-control" />
-                  <label class="form-label" style="color: #DAA520;" for="form3Example4">Contact Us</label>
-                </div>
-
-                <!-- Checkbox --> 
-                <!-- Submit button -->
-                <button type="submit" class="btn btn-dark btn-block mb-4">
-                  Send
-                </button>
-
-              </form>
-            </div>
-          </div>
-        </section>
-        <!--Section: Content-->
-      </div>
-    </main>
-    <!--Main layout-->
-
+		function floatedLabel(input) {
+			var $field = input.closest('.form-group');
+			if (input.val()) {
+				$field.addClass('input-not-empty');
+			} else {
+				$field.removeClass('input-not-empty');
+			}
+		}
+	</script>
     <!--Footer-->
-    <footer class="bg-dark text-lg-start">
+    <footer class="bg-dark text-lg-sart" style="background-color: black;">
       
       <div class="text-center py-4 align-items-center">
-        <p>Follow ftudioafrica on social media</p>
+        <p>Follow ftudiosafrica on social media</p>
         <a
           href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA"
           class="btn btn-warning m-1"
@@ -511,7 +393,7 @@
       </div>
 
       <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      <div class="text-center p-3" style="background-color: black;">
         © 2020 Copyright:
         <a class="text-white" href="https://mdbootstrap.com/">ftudiosafrica.com</a>
       </div>
@@ -519,8 +401,9 @@
     </footer>
     <!--Footer-->
     <!-- MDB -->
-    <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Custom scripts -->
-    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
+
