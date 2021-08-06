@@ -16,7 +16,10 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 </head>
 <body style="border-radius: 25%;">
-        <!--Main Navigation-->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+  <div class="container-fluid">
+    <!-- Navbar brand -->
     <header>
       <style>
         body{
@@ -37,7 +40,7 @@
           background-position: center center;
         }
         .carousel-item:nth-child(2) {
-          background-image: url("{% static 'img/background2.jpg'%}");
+          background-image: url("{% static 'img/background2.jpg' %}");
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center center;
@@ -147,120 +150,23 @@
       100% { transform: rotate(-3deg); }
     }
 
-    .header-section {
-        margin-bottom: 35px;
-      }
-
-      .header-section .title {
-        position: relative;
-        margin-bottom: 40px;
-        padding-bottom: 25px;
-        text-transform: uppercase;
-        font-weight: 700;
-      }
-
-      .header-section .title:before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 140px;
-        height: 1px;
-        background-color: #f70037;
-      }
-
-      .header-section .title:after {
-        content: "";
-        position: absolute;
-        bottom: -1px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 45px;
-        height: 3px;
-        background-color: #726467;
-      }
-
-      .header-section .title span {
-        color: #f70037;
-      }
-
-      .header-section .description {
-        color: #6f6f71;
-      }
-
-
-    .single-service {
-      margin-top: 40px;
-      background-color: #24252a;
-      box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
-    }
-    .single-service .part-1 {
-      padding: 40px 40px 25px;
-      border-bottom: 2px solid #1d1e23;
-      }
-
-    .single-service .part-1 i {
-      margin-bottom: 25px;
-      font-size: 50px;
-      color: #f70037;
-    }
-
-    .section-services .single-service .part-1 .title {
-      font-size: 17px;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      line-height: 1.8em;
-    }
-
-
-      </style>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
-  <div class="container-fluid">
-    <!-- Navbar brand -->
-    
+  </style>
           <img src="{% static 'img/logo.jpg' %}" style="height: 60px; margin-top: -15px;"  alt="">
           <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
             aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
           </button>
+          
           <div class="collapse navbar-collapse" id="navbarExample01">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item active">
-		       <a href="./index.html" class="btn btn-dark">HOME</a> 
-               
-              </li>
+		      <a href="{% url 'home'%}" class="btn btn-dark">HOME</a> 
+               </li>
               <li class="nav-item"
 		      > <a href="{% url 'blog' %}" class="btn btn-dark">BLOG</a> 
              </li>
               <li class="nav-item">
-		      <a href="./classes.html" class="btn btn-dark">CLASSES</a> 
-              </li>
-            </ul>
-            <ul class="navbar-nav d-flex flex-row">
-              <!-- Icons -->
-              <li class="nav-item me-3 me-lg-0">
-                <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
-                  target="_blank">
-                  <i class="fab fa-youtube"></i>
-                </a>
-              </li>
-              <li class="nav-item me-3 me-lg-0">
-                <a class="nav-link" href="https://www.facebook.com/mdbootstrap" rel="nofollow" target="_blank">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="nav-item me-3 me-lg-0">
-                <a class="nav-link" href="https://twitter.com/MDBootstrap" rel="nofollow" target="_blank">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="nav-item me-3 me-lg-0">
-                <a class="nav-link" href="https://github.com/mdbootstrap/mdb-ui-kit" rel="nofollow" target="_blank">
-                  <i class="fab fa-github"></i>
-                </a>
+		      <a href="{%  url 'classes'%}" class="btn btn-dark">CLASSES</a> 
               </li>
             </ul>
           </div>
@@ -312,10 +218,7 @@
                   <a
                     class="btn btn-outline-light btn-lg m-2"
                     href="https://mdbootstrap.com/docs/standard/content-styles/masks/"
-                    target="_blank"
-                    role="button"
-                    >Classes</a
-                  >
+                    target="_blank" role="button">Classes</a>
                 </div>
               </div>
             </div>
@@ -349,32 +252,29 @@
 
             <div class="col-md-6 gx-5 mb-4 text-white">
               <h4><strong style="color: #DAA520;i padding-top: 20%;">Welcome To ftudiosafrica</strong></h4>
-              <p class="text-muted">
                	<b>ftudiosafrica</b> is a production company that mainly deals with home photography
 		and video production
 		we value our clients and we are here to give them the best service for both photography
 		and videography
               </p>
-	      <p><strong style="color: #DAA520;">LOCATION?</strong></p>
-              <p class="text-muted">
+	      <p><strong style="color: #DAA520;">LOCATION?</strong></br>
+              
                 we are located at ruaka, capital heights apartment alongside delta limuru road.
               </p>  
 		
-	      <p><strong style="color: #DAA520;">WORK...?</strong></p>
-              <p class="text-muted">
+	      <p><strong style="color: #DAA520;">WORK...?</strong></br></br>
                 we are mojorly interested in video production i.e music video,  movie production and any
 		content production, we have proffessional script writters, video directors and editors. 
 		our aim is to be the leading production  company in kenya in the next few years.
 		click on classes to get involved in our journey for production.
 	      </p>
-	      <a href="./classes.html" class="btn btn-dark">CLASSES</a>  
-	      <p><strong style="color: #DAA520;"><br>BOOKINGS AND RATES?</strong></p>
-              <p class="text-muted">
-                For events and photograpys booking, click on the button bellow to book for a session in our
+	      <a href="{% url 'classes'%}" class="btn btn-dark">CLASSES</a>  
+	      <p><strong style="color: #DAA520;"><br>BOOKINGS AND RATES?</strong></br></br>
+￼        For events and photograpys booking, click on the button bellow to book for a session in our
 		studion of with our photgraphers and videographers follow the instructions to make sure
 		you have fully secure your slot.
               </p>
-	      	<a href="./bookings.html" class="btn btn-dark">BOOKINGS</a> 
+	      <a href="{% url 'bookings'%}" class="btn btn-dark">BOOKINGS</a> 
             </div>
           </div>
         </section>

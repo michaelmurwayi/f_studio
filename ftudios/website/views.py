@@ -8,3 +8,8 @@ class HomeView(TemplateView):
 class BlogView(TemplateView):
     template_name = "blog.html"
 
+class BookView(TemplateView):
+    template_name = "bookings.html"
+
+class ClassView(TemplateView):
+    template_name = "classes.html"

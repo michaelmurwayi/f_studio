@@ -30,7 +30,7 @@
 	top: 0px;
 	bottom: 0px;
 	width: 310px;
-	background-image: url('../img/background.jpg');
+	background-image: url("../img/falogo.jpg");
 	background-size: cover;
 	background-position: center;
 }
@@ -190,4 +190,4 @@
 	.booking-form>form {
 		margin-left: 0px;
 	}
-}
+}s  
